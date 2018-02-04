@@ -1,6 +1,7 @@
 package cn.edu.gdmec.android.intenttext;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.Button;
 public class FirstActivity extends AppCompatActivity {
 
     private Button btn_next;
+    private Button btn_baidu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,15 @@ public class FirstActivity extends AppCompatActivity {
                 //intent.putExtra("keytype","你好，我是intent传递的内容！");
              //   startActivity(intent);
                 startActivityForResult(intent,1);
+            }
+        });
+        btn_baidu = (Button) findViewById(R.id.btn_baidu);
+        btn_baidu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
+                startActivity(intent);
             }
         });
 

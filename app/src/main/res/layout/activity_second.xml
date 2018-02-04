@@ -4,12 +4,18 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
 
         <Button
             android:id="@+id/btn_before"
             android:text="上一页"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_call"
+            android:text="拨号"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 </LinearLayout>  
